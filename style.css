@@ -1,0 +1,108 @@
+:root {
+    --brand-ink: #f80101;
+    --brand-accent: #FFFFFF;
+    --bg-premium: #141414;
+    --text-white: #ffffff;
+    --text-muted: rgba(255,255,255,0.7);
+    --shadow-premium: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+body { 
+    background-color: var(--bg-premium); 
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--text-white); 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    width: 100%; 
+    min-height: 100vh;
+    display: block; 
+}
+
+.silver-shine {
+    filter: drop-shadow(0 0 5px rgba(248,1,1,0.6));
+    animation: shine 3s infinite;
+}
+@keyframes shine {
+    0% { filter: brightness(1) drop-shadow(0 0 5px #f80101); }
+    50% { filter: brightness(1.3) drop-shadow(0 0 15px #f80101); }
+    100% { filter: brightness(1) drop-shadow(0 0 5px #f80101); }
+}
+
+.main-hub { 
+    min-height: 100vh; 
+    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 30px 20px 80px 20px; 
+    background: radial-gradient(circle at center, #e60707 0%, #eb3d3d 100%); 
+}
+
+.hub-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; width: 100%; max-width: 350px; }
+.agency-logo { width: 55px; height: auto; }
+.brand-text { display: flex; flex-direction: column; }
+.agency-name { color: white; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.1; }
+.agency-slogan { color: var(--text-muted); font-size: 0.6rem; font-style: italic; margin-top: 4px; }
+
+.user-card { background: white; padding: 12px; border-radius: 20px; border: 4px solid #FFFFFF; text-align: center; width: 100%; max-width: 290px; position: relative; box-shadow: var(--shadow-premium); }
+.vip-client-name { font-family: 'Orbitron', sans-serif; color: var(--brand-ink); font-size: 1.3rem; margin-bottom: 8px; font-weight: 900; }
+.main-photo-wrapper { position: relative; cursor: pointer; border-radius: 12px; overflow: hidden; height: 280px; background: #f0f0f0; }
+.vip-photo { width: 100%; height: 100%; object-fit: contain; border-radius: 12px; display: block; }
+.vip-badge { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); background: var(--brand-ink); color: white; padding: 8px 15px; font-weight: 800; font-size: 0.6rem; border-radius: 50px; border: 2px solid white; z-index: 10; white-space: nowrap; font-family: 'Orbitron'; }
+
+.btn-share-passionate { background: linear-gradient(135deg, #f80101 0%, #49af3b 100%); color: white; border: 2px solid white; padding: 14px 20px; border-radius: 50px; font-weight: 900; font-size: 0.7rem; margin-top: 20px; cursor: pointer; text-transform: uppercase; font-family: 'Orbitron'; }
+
+.quick-access-menu { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; max-width: 360px; margin-top: 25px; padding: 12px; background: rgba(255,255,255,0.1); border-radius: 20px; backdrop-filter: blur(10px); }
+.menu-item { background: none; border: none; color: var(--text-white); display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; }
+.menu-item i { background: white; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border-radius: 50%; color: var(--brand-ink); }
+.menu-item span { font-size: 0.45rem; font-weight: 800; text-transform: uppercase; text-align: center; line-height: 1.1; }
+
+.social-contact-wrapper { width: 100%; max-width: 360px; margin-top: 40px; text-align: center; padding-bottom: 40px; }
+.social-title { display: block; color: white; font-family: 'Orbitron'; font-weight: 800; font-size: 0.75rem; margin-bottom: 15px; letter-spacing: 1px; }
+.social-contact-hub { display: flex; justify-content: center; align-items: center; gap: 15px; }
+.social-btn { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
+
+.yt-style i { color: #FF0000; }
+.wa-style i { color: #25D366; }
+.web-style i { color: #f80101; }
+
+/* CAPA DE CONTENIDO */
+.content-overlay { position: fixed; inset: 0; background: rgba(4, 95, 26, 0.98); z-index: 1000; display: flex; flex-direction: column; align-items: center; padding: 70px 15px 20px 15px; backdrop-filter: blur(15px); overflow-y: auto; }
+.btn-close-overlay { position: absolute; top: 15px; right: 15px; background: white; color: var(--brand-ink); width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; border: none; font-weight: 900; }
+
+.tab-pane { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.pane-title { font-family: 'Orbitron'; color: white; font-size: 1.1rem; margin-bottom: 20px; text-align: center; width: 100%; padding: 10px; border-bottom: 2px solid rgba(255,255,255,0.3); }
+
+/* ESTILOS DEL FORMULARIO DE CONCURSO */
+.concurso-form-container { width: 100%; max-width: 350px; padding-bottom: 50px; }
+.form-group-box { background: rgba(255,255,255,0.1); border-radius: 15px; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); }
+.input-label { display: block; font-size: 0.65rem; font-weight: 800; color: #ff7a7a; margin-bottom: 5px; text-transform: uppercase; font-family: 'Orbitron'; }
+.input-field { width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 12px; font-family: 'Montserrat'; font-size: 0.85rem; background: white; color: #333; }
+.tutor-section { border-left: 4px solid #25D366; }
+
+.legal-contract-box { background: white; border-radius: 12px; padding: 15px; color: #333; font-size: 0.7rem; line-height: 1.4; margin-bottom: 20px; text-align: justify; }
+.legal-text { margin-bottom: 15px; }
+.checkbox-container { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 0.65rem; color: #f80101; cursor: pointer; }
+
+.btn-send-concurso { width: 100%; padding: 15px; border-radius: 50px; border: 2px solid white; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; font-family: 'Orbitron'; font-weight: 800; font-size: 0.85rem; cursor: pointer; }
+
+/* MODAL Y OTROS */
+.premium-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 340px; margin-bottom: 30px; }
+.premium-photo-item { background: white; padding: 4px; border-radius: 12px; border: 3px solid white; height: 150px; overflow: hidden; cursor: pointer; }
+.premium-photo-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+
+.overlay-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 5000; padding: 20px; backdrop-filter: blur(10px); }
+.modal-card-premium { background: white; padding: 30px 15px; border-radius: 30px; width: 100%; max-width: 320px; text-align: center; border: 6px solid var(--brand-ink); position: relative; }
+.btn-close-modal { position: absolute; top: -15px; right: -15px; background: var(--brand-ink); color: white; width: 40px; height: 40px; border-radius: 50%; border: 3px solid white; font-size: 1.5rem; cursor: pointer; }
+
+/* Cambios en barra del modal */
+.info-bar-primary { background: var(--brand-ink); color: white; padding: 12px; border-radius: 12px; font-size: 0.65rem; font-weight: 800; font-family: 'Orbitron'; margin-bottom: 15px; letter-spacing: 0.5px; }
+.info-bar-secondary { background: #f4f7fa; color: #333; padding: 15px; border-radius: 15px; border-left: 6px solid var(--brand-ink); text-align: left; }
+.contact-item-row { display: flex; align-items: center; gap: 12px; font-size: 0.75rem; font-weight: 700; margin-bottom: 10px; color: #333; cursor: pointer; }
+.contact-item-row i { color: var(--brand-ink); }
+
+.btn-whatsapp-direct { background: #25D366; color: white; padding: 16px; border-radius: 50px; text-decoration: none; font-weight: 900; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid white; }
+
+.credits-altpro { margin-top: 25px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.6rem; color: var(--text-muted); }

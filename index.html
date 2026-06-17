@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <title>IA PARA NIÑOS Y JÓVENES | CONCURSO PRI</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="IA PARA NIÑOS Y JÓVENES | PRI AGUASCALIENTES" />
+    <meta property="og:description" content="Innovación y tecnología para el futuro de Aguascalientes. Participa en nuestro concurso." />
+    <meta property="og:image" content="https://altpro22.github.io/ia-kids-pri/assets/imagenes/og_pri.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://altpro22.github.io/ia-kids-pri/" />
+    <meta property="og:site_name" content="CONECTA de Alt Pro" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="portada-hub" class="main-hub">
+        <header class="hub-header">
+            <img src="assets/imagenes/logo.png" alt="Logo" class="agency-logo silver-shine" onerror="this.src='assets/imagenes/logo.jpg'">
+            <div class="brand-text">
+                <span class="agency-name">IA PARA NIÑOS | AI FOR KIDS</span>
+                <span class="agency-slogan">"Innovación para Aguascalientes"</span>
+            </div>
+        </header>
+
+        <div class="hero-content">
+            <div id="user-card-vip" class="user-card">
+                <h1 id="lorena-title" class="vip-client-name">CONCURSO IA</h1>
+                <div class="main-photo-wrapper">
+                    <img id="profile-pic-img" src="assets/imagenes/logo.png" alt="Perfil" class="vip-photo" onerror="this.src='assets/imagenes/logo.jpg'">
+                </div>
+                <div class="vip-badge">Alejandro Moreno Cárdenas</div>
+            </div>
+            <button class="btn-share-passionate" onclick="shareExperienceRobust()">
+                COMPARTIR TARJETA | SHARE CARD
+            </button>
+        </div>
+
+        <nav class="quick-access-menu">
+            <button class="menu-item" onclick="showAppContent('galeria')">
+                <i class="fas fa-gamepad"></i><span>JUEGOS<br>GAMES</span>
+            </button>
+            <button class="menu-item" onclick="showAppContent('reconocimientos')">
+                <i class="fas fa-play-circle"></i><span>VIDEOS<br>VIDEOS</span>
+            </button>
+            <button class="menu-item" onclick="showAppContent('comprar')">
+                <i class="fas fa-book-open"></i><span>MATERIALES<br>MATERIALS</span>
+            </button>
+            <button class="menu-item" onclick="showAppContent('concurso')">
+                <i class="fas fa-trophy"></i><span>CONCURSO IA / PARTICIPA</span>
+            </button>
+        </nav>
+
+        <div class="social-contact-wrapper">
+            <span class="social-title">SÍGUENOS Y CONTÁCTANOS | FOLLOW US</span>
+            <nav class="social-contact-hub">
+                <a id="link-yt" href="#" target="_blank" class="social-btn yt-style" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a id="link-contact-flyer" href="javascript:void(0)" onclick="openMarketing()" class="social-btn web-style" title="Contacto"><i class="fas fa-address-book"></i></a>
+                <a id="link-web" href="#" target="_blank" class="social-btn web-style" title="Sitio Web"><i class="fas fa-globe"></i></a>
+                <a id="link-wa" href="#" target="_blank" class="social-btn wa-style" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </nav>
+            
+            <div class="credits-altpro">
+                <span>Produced by AltPro</span>
+                <a href="https://wa.me/524491472336" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main id="dynamic-content-layer" class="content-overlay" style="display: none;">
+        <button class="btn-close-overlay" onclick="closeAppContent()">×</button>
+        
+        <section class="tab-pane" id="galeria-pane">
+            <h2 class="pane-title">JUEGOS INTERACTIVOS | INTERACTIVE GAMES</h2>
+            <div id="grid-fotos-cliente" class="premium-photo-grid"></div>
+        </section>
+
+        <section class="tab-pane" id="reconocimientos-pane" style="display: none;">
+            <h2 class="pane-title">VIDEOS Y CANCIONES | VIDEOS & SONGS</h2>
+            <div id="grid-reconocimientos" class="premium-photo-grid"></div>
+        </section>
+
+        <section class="tab-pane" id="comprar-pane" style="display: none;">
+            <h2 class="pane-title">MATERIALES DIDÁCTICOS | MATERIALS</h2>
+            <div id="grid-clientes-fotos" class="premium-photo-grid"></div>
+        </section>
+
+        <section class="tab-pane" id="concurso-pane" style="display: none;">
+            <h2 class="pane-title">DATOS DEL CONCURSANTE</h2>
+            
+            <div class="concurso-form-container">
+                <div class="form-group-box">
+                    <label class="input-label">NOMBRE DEL PROYECTO 1:</label>
+                    <input type="text" class="input-field" placeholder="Ej: Fórmulas de áreas">
+                    <label class="input-label">LINK DEL JUEGO 1:</label>
+                    <input type="url" class="input-field" placeholder="http://...">
+                </div>
+
+                <div class="form-group-box">
+                    <label class="input-label">NOMBRE DEL PROYECTO 2:</label>
+                    <input type="text" class="input-field" placeholder="Opcional">
+                    <label class="input-label">LINK DEL JUEGO 2:</label>
+                    <input type="url" class="input-field" placeholder="http://...">
+                </div>
+
+                <div class="form-group-box">
+                    <label class="input-label">NOMBRE DEL PROYECTO 3:</label>
+                    <input type="text" class="input-field" placeholder="Opcional">
+                    <label class="input-label">LINK DEL JUEGO 3:</label>
+                    <input type="url" class="input-field" placeholder="http://...">
+                </div>
+
+                <div class="form-group-box tutor-section">
+                    <label class="input-label">NOMBRE COMPLETO DEL TUTOR:</label>
+                    <input type="text" class="input-field">
+                    
+                    <label class="input-label">TELÉFONO CELULAR:</label>
+                    <input type="tel" class="input-field">
+                    
+                    <label class="input-label">MAIL:</label>
+                    <input type="email" class="input-field">
+                    
+                    <label class="input-label">RED SOCIAL (LINK):</label>
+                    <input type="text" class="input-field">
+                </div>
+
+                <div class="legal-contract-box">
+                    <p class="legal-text">
+                        <strong>AVISO LEGAL Y DE PRIVACIDAD:</strong> Al participar, el tutor acepta que la información proporcionada será utilizada exclusivamente por el comité organizador de <strong>IA PARA NIÑOS / AltPro</strong> para fines del concurso, evaluación y comunicación. He leído las condiciones y acepto recibir información y ser parte de este proyecto y concurso, recibiendo de manera individual y grupal tutoriales, claridad en la evaluación, reglamentos y contenido de apoyo.
+                    </p>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="accept-legal">
+                        <span class="checkmark"></span>
+                        ACEPTO LOS TÉRMINOS Y CONDICIONES
+                    </label>
+                </div>
+
+                <button class="btn-send-concurso" onclick="alert('Funcionalidad de envío lista para etapa 2')">ENVIAR INSCRIPCIÓN</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="marketing-modal" class="overlay-modal" style="display: none;">
+        <div class="modal-card-premium">
+            <button class="btn-close-modal" onclick="closeMarketing()">×</button>
+            <img src="assets/imagenes/logo.png" alt="Logo" class="modal-logo" style="width: 70px; margin-bottom: 15px;" onerror="this.src='assets/imagenes/logo.jpg'">
+            
+            <div class="info-bar-primary">
+                CDE PRI AGUASCALIENTES / DEMOCRACIA Y JUSTICIA SOCIAL
+            </div>
+
+            <div class="info-bar-secondary">
+                <h3 style="font-size: 0.9rem; margin-bottom: 8px; color: #f80101; border-bottom: 1px solid #ddd;">CONTÁCTANOS</h3>
+                <div class="contact-item-row" onclick="window.open('https://wa.me/524499151411')">
+                    <i class="fas fa-phone-alt"></i> 449 915 1411
+                </div>
+                <div class="contact-item-row" onclick="window.open('https://www.google.com/maps?q=Av+Independencia+1865+Aguascalientes')">
+                    <i class="fas fa-map-marker-alt"></i> Av. López Mateos Heroico Colegio Militar 810, Col. San Luis, C.P. 20250.
+                </div>
+            </div>
+
+            <div class="qr-container-premium" style="margin-top: 20px;">
+                <a href="https://pri-aguascalientes.org/" target="_blank" style="text-decoration:none; display:block;">
+                    <img id="qr-code-img" src="" class="qr-image" alt="QR Code" style="width: 130px; height: 130px; cursor: pointer;">
+                    <p style="font-size: 0.65rem; font-weight: 900; color: #f80101; margin-top: 5px;">VISITA NUESTRO SITIO WEB</p>
+                </a>
+            </div>
+
+            <a id="link-wa-direct" href="#" target="_blank" class="btn-whatsapp-direct">
+                <i class="fab fa-whatsapp"></i> ENVIAR WHATSAPP
+            </a>
+        </div>
+    </div>
+
+    <audio id="sndFxClick" src="assets/sonidos/clic.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
