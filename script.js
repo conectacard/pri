@@ -1,10 +1,10 @@
-const LORENA_DATA = { titulo: "CONCURSO IA" };
+const LORENA_DATA = { titulo: "PRI ES EDUCACION" };
 
 const CONFIG = { 
     whatsapp: "524491472336", 
     youtube: "https://www.youtube.com/watch?v=pjbyce2eR0Q", 
     facebook: "https://www.facebook.com/pepe.moreno.9235", 
-    sitioWeb: "https://demo-altpro.com/", 
+    sitioWeb: "https://pri.org.mx/ElPartidoDeMexico/", 
     mapa: "https://pri-aguascalientes.org/", 
     allowedExt: ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.JPEG'] 
 };
